@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const { User, userValidate } = require('../model/userModel');
 
+
+//[POST] /create-account
 exports.createUser = async (req, res) => {
     const phone = req.body.phone;
 

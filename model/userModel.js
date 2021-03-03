@@ -19,6 +19,7 @@ function userValidate(user) {
     const scheme = Joi.object({
         fullname: Joi.string(),
         phone: Joi.string().required(),
+        email: Joi.string(),
         password: Joi.string().required().min(6).max(50),
         type: Joi.string(),
     })
