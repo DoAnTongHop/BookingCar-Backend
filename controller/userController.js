@@ -16,7 +16,7 @@ exports.createUser = async (req, res) => {
         email: req.body.email,
         phone: phone,
         password: req.body.password,
-        fullname: req.body.displayName,
+        fullname: req.body.fullname,
     })
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);
